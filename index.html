@@ -1,64 +1,162 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minnow Run</title>
-  <meta name="description" content="Minnow Run is a one-tap arcade swim for Android. Tap to swim, weave the plants, dodge the fish. One life, three-letter initials, a leaderboard for everyone on the phone.">
-  <link rel="canonical" href="https://minnowrun.github.io/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minnow Run | Tap to swim. Weave plants, dodge fish!</title>
+<meta name="description" content="Minnow Run is a free one-tap arcade swim for iPhone and Android. Weave the plants, dodge the big fish or graze them for bonus points, and unlock eight more fish to swim as. Coming soon to the App Store and Google Play.">
+<link rel="canonical" href="https://minnowrun.github.io/">
 
-  <!-- Zero JavaScript, zero third-party requests, same as the privacy page. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Zero JavaScript, zero third-party requests. Everything the page loads
+     comes from this origin, so the policy can stay this tight. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Minnow Run">
-  <meta property="og:title" content="Minnow Run">
-  <meta property="og:description" content="Tap to swim. Weave plants, dodge fish! A one-life arcade swim for Android.">
-  <meta property="og:url" content="https://minnowrun.github.io/">
-  <meta property="og:image" content="https://minnowrun.github.io/assets/feature-graphic.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Minnow Run">
-  <meta name="twitter:description" content="Tap to swim. Weave plants, dodge fish! A one-life arcade swim for Android.">
-  <meta name="twitter:image" content="https://minnowrun.github.io/assets/feature-graphic.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minnow Run">
+<meta property="og:title" content="Minnow Run | Tap to swim. Weave plants, dodge fish!">
+<meta property="og:description" content="A free one-tap arcade swim for iPhone and Android. One life, nine fish to swim as, and a leaderboard for everyone on the phone.">
+<meta property="og:url" content="https://minnowrun.github.io/">
+<meta property="og:image" content="https://minnowrun.github.io/assets/og-card.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="A cartoon minnow swims away from an open-mouthed bass, beside the Minnow Run title and the line: Tap to swim. Weave plants, dodge fish!">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Minnow Run | Tap to swim. Weave plants, dodge fish!">
+<meta name="twitter:description" content="A free one-tap arcade swim for iPhone and Android. One life, nine fish to swim as, and a leaderboard for everyone on the phone.">
+<meta name="twitter:image" content="https://minnowrun.github.io/assets/og-card.jpg">
+<meta name="twitter:image:alt" content="A cartoon minnow swims away from an open-mouthed bass, beside the Minnow Run title and the line: Tap to swim. Weave plants, dodge fish!">
 
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#061c2c">
-  <link rel="stylesheet" href="assets/site.css">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#061c2c">
+<link rel="preload" href="assets/fonts/lilita-one.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<header class="hero">
+<header class="hero art">
+  <img class="hero-art" src="assets/hero-1600.webp"
+       srcset="assets/hero-800.webp 800w, assets/hero-1600.webp 1600w" sizes="100vw"
+       width="1600" height="800" fetchpriority="high"
+       alt="A cartoon minnow swims away from an open-mouthed bass through weeds, rocks and water lilies.">
   <div class="wrap hero-inner">
     <a class="mark" href="https://minnowrun.github.io/">
+      <img src="assets/icon.webp" width="52" height="52" alt="">
       <span>Minnow Run</span>
     </a>
-    <h1>Tap to swim. Weave plants, dodge fish!</h1>
-    <p class="updated">A one-life arcade swim for Android. Coming soon to Google Play.</p>
+
+    <h1>Tap to swim. <span class="gold">Weave plants, dodge fish!</span></h1>
+
+    <p class="lede">
+      A one-tap arcade swim for iPhone and Android. Thread your minnow past
+      the plants, the rocks and the big fish for as long as you can.
+      <strong>One life, and the retry is instant.</strong>
+    </p>
+
+    <!-- When the store listings go public, this becomes the two badges, the way
+         stormheadsup.github.io's hero does (its assets/badge-app-store.svg and
+         badge-google-play.png, and its .stores / .badge-* CSS). -->
+    <p class="soon">Coming soon to the App Store and Google Play</p>
+
+    <p class="fineprint">
+      Free, with an occasional ad between runs. No account, no sign-up,
+      nothing to buy.
+    </p>
   </div>
 </header>
 
-<main class="wrap">
-  <p>
-    <img class="shot" src="assets/feature-graphic.png" width="1024" height="500" alt="The Minnow Run wordmark, half out of the water, on a pond">
-  </p>
+<main>
 
-  <p class="lede">Tap to rise, let go to sink, and thread your minnow through the weeds and past
-  the bigger fish for as long as you can. Every run starts at dawn and swims into night.</p>
+<section class="shelf-section" aria-label="Screenshots">
+  <div class="shelf" tabindex="0">
+    <img src="assets/shot-1.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="A daytime run: the minnow swims between a pink water lily trailing its roots from the surface and a tall stand of weeds, under snowy mountains and pines.">
+    <img src="assets/shot-2.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="A dawn run under a pink sky: the minnow slips between a bass above and a pike below.">
+    <img src="assets/shot-3.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="A night run in dark water: the minnow weaves between a water lily's roots and a stand of weeds.">
+    <img src="assets/shot-4.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="The game-over card, Fish sticks!, with a score of 54, a Gold fin medal, a new skin unlocked and first place on the leaderboard, and buttons for Main Menu and Try Again.">
+    <img src="assets/shot-5.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="A dusk run under an orange sky: the minnow threads between two big bass.">
+    <img src="assets/shot-6.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="The Skins wardrobe: Minnow, Ember, Frostbite, Cupid, Fiesta, Meltdown, Neon, Mecha-Minnow and Rainbow, each unlocked by a best score or by grazing fish.">
+    <img src="assets/shot-7.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="The main menu: the Minnow Run title over the minnow, Tap anywhere to start, and buttons for Player, Skins and Leaderboard.">
+    <img src="assets/shot-8.webp" width="540" height="1080" loading="lazy" decoding="async"
+         alt="Enter Initials: three arcade letters, each with arrows to change it, and a reminder to use the same initials if you have played before.">
+  </div>
+  <p class="shelf-hint">Swipe or scroll to see more.</p>
+</section>
 
-  <ul class="terms">
-    <li><strong>One tap, one life.</strong> Runs are short and the retry is instant.</li>
-    <li><strong>Graze the big fish</strong> for bonus points, if you dare.</li>
-    <li><strong>Nine skins to unlock,</strong> earned by score and by nerve.</li>
-    <li><strong>Three-letter arcade profiles</strong> and a local leaderboard, so everyone on the
-    phone keeps their own best.</li>
-    <li><strong>Original chiptune music and sound,</strong> each with its own mute.</li>
-    <li><strong>No account, no sign-in, nothing to buy.</strong> Free, with an occasional ad between
-    runs. Made for families: see the <a href="privacy/">privacy policy</a>.</li>
-  </ul>
+<section class="band alt">
+  <div class="wrap">
+    <h2>How it plays</h2>
+    <p class="sub">
+      Easy to pick up, hard to put down. Runs are short, and every one starts
+      fresh.
+    </p>
 
-  <p>Made by a dad, tested by kids. Fish sticks!</p>
+    <div class="grid">
+      <div class="card">
+        <h3><span class="ico" aria-hidden="true">👆</span>One tap, one life</h3>
+        <p>Tap to swim up; stop tapping and you sink. Bump a plant, a rock,
+           the surface or the bottom, or get caught by a big fish, and the run
+           is over. Try again in a tap.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ico" aria-hidden="true">🐟</span>Dodge or graze</h3>
+        <p>Bass, pike and bluegill cruise through. Dodge them, or swim close
+           past one without touching it for a graze worth 2 bonus points.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ico" aria-hidden="true">🎨</span>Nine fish to swim as</h3>
+        <p>Start as the classic Minnow and earn eight more, from Ember and
+           Frostbite to Mecha-Minnow and Rainbow, by beating your best or
+           grazing fish.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ico" aria-hidden="true">🌅</span>Day into night</h3>
+        <p>Every run starts in daylight. The farther you swim, the pond turns
+           to dusk, then night, then dawn.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ico" aria-hidden="true">🏆</span>Everyone keeps their best</h3>
+        <p>Pick three arcade initials and the whole family can share one
+           phone, each with their own best score and skins, and one
+           leaderboard for bragging rights.</p>
+      </div>
+      <div class="card">
+        <h3><span class="ico" aria-hidden="true">🎵</span>Original chiptune</h3>
+        <p>Two original chiptune tunes and retro sound effects, with a
+           separate mute for the music and for the sound.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Made for families</h2>
+    <p class="sub">Made by a dad, tested by kids. Fish sticks!</p>
+
+    <ul class="points">
+      <li><strong>No account, nothing to sign up for.</strong>
+          Open it and swim.</li>
+      <li><strong>Your game stays on your phone.</strong>
+          Initials, scores and skins are never uploaded anywhere.</li>
+      <li><strong>Kid-safe ads, and not many.</strong>
+          At most one full-screen ad every three runs, always requested as
+          child-directed, non-personalized and rated&nbsp;G.</li>
+      <li><strong>Nothing to buy.</strong>
+          No in-app purchases, no chat, no social features.</li>
+    </ul>
+
+    <p class="more">The details are in the <a href="privacy/">privacy policy</a>.</p>
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -72,8 +170,9 @@
     </div>
 
     <p class="credit">
-      Outfit typeface by the Outfit Project Authors, SIL Open Font License 1.1. Google Play and
-      the Google Play logo are trademarks of Google LLC.
+      Lilita One typeface by Juan Montoreano, SIL Open Font License 1.1.
+      App Store is a service mark of Apple Inc. Google Play is a trademark of
+      Google LLC.
     </p>
   </div>
 </footer>
