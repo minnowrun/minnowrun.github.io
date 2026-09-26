@@ -17,32 +17,34 @@
   <meta property="og:title" content="Minnow Run | Privacy Policy">
   <meta property="og:description" content="What data the Minnow Run game uses, why, and who it is shared with.">
   <meta property="og:url" content="https://minnowrun.github.io/privacy/">
-  <meta property="og:image" content="https://minnowrun.github.io/assets/feature-graphic.png">
+  <meta property="og:image" content="https://minnowrun.github.io/assets/og-card.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://minnowrun.github.io/assets/feature-graphic.png">
+  <meta name="twitter:image" content="https://minnowrun.github.io/assets/og-card.jpg">
   <meta name="twitter:title" content="Minnow Run | Privacy Policy">
   <meta name="twitter:description" content="What data the Minnow Run game uses, why, and who it is shared with.">
 
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <meta name="theme-color" content="#061c2c">
+  <link rel="preload" href="../assets/fonts/lilita-one.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
+<body class="doc">
 
 <header class="hero">
   <div class="wrap hero-inner">
     <a class="mark" href="https://minnowrun.github.io/">
+      <img src="../assets/icon.webp" width="52" height="52" alt="">
       <span>Minnow Run</span>
     </a>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 9, 2026</p>
+    <p class="updated">Last updated: September 26, 2026</p>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="lede">Minnow Run ("the app", "we", "us") is a one-tap arcade game: tap to swim, weave
-  the plants, dodge the fish. This policy explains what data the app uses, why, and who it is
+  <p class="lede">Minnow Run ("the app", "we", "us") is a one-tap arcade game for iPhone and
+  Android: tap to swim, weave the plants, dodge the fish. This policy explains what data the app uses, why, and who it is
   shared with. The app has no accounts, runs no analytics of its own, and we do not sell your
   personal information. It is made for families, and every player is treated as a child for
   advertising purposes.</p>
@@ -50,21 +52,29 @@
   <h2>Data we collect and use</h2>
   <ul class="terms">
     <li><strong>Advertising identifier, ad data &amp; diagnostics.</strong> The app shows a
-    full-screen ad between runs through Google AdMob. The Google Mobile Ads SDK collects your
-    device's advertising ID and app set ID, your interactions with ads, an approximate location
+    full-screen ad between runs through Google AdMob. The Google Mobile Ads SDK collects a device
+    identifier (on Android, your device's advertising ID and app set ID; on iPhone, the app never
+    asks for permission to track you, so Apple's advertising identifier is not available to it),
+    your interactions with ads, an approximate location
     derived from your IP address, and diagnostic information about your device and this app
     (device model, operating system version, app version, and technical error details). Google
     uses that data to serve and measure ads, to keep its SDK working, and to detect ad fraud.
     The app asks Google for <strong>child-directed, non-personalized ads at a "G" content
     rating for every player</strong>, whatever their age.</li>
-    <li><strong>Technical data.</strong> The game itself makes no internet requests. The only
-    network traffic the app generates is the ad requests described above, and as with any
-    internet request, standard network information (such as your IP address) is visible to
-    the service contacted.</li>
+    <li><strong>Game updates.</strong> When it starts, the app checks Expo's update service (EAS
+    Update) for a newer version of the game, so fixes can arrive without a trip to the store. The
+    check sends technical details (the app's platform, version and update channel, which updates
+    it has, and whether a recent one failed to start) and a random installation ID that the app
+    creates for this purpose, which the service uses to deliver updates, for example to roll one
+    out gradually. It contains nothing about you and none of your game data.</li>
+    <li><strong>Technical data.</strong> The game itself needs no internet connection. The app's
+    only network traffic is the ad requests and the update check described above, and as with any
+    internet request, standard network information (such as your IP address) is visible to the
+    services contacted.</li>
     <li><strong>Crash data.</strong> The app sends no crash reports, usage statistics, or
-    diagnostic events to us. We run no crash-reporting or analytics service of our own. The
-    only diagnostic data the app transmits is the ad SDK data described above, and that goes to
-    Google, not to us.</li>
+    diagnostic events to us. We run no crash-reporting or analytics service of our own. Apart
+    from the ad SDK data and the update check described above, the app transmits no diagnostic
+    data.</li>
     <li><strong>On-device game data.</strong> The three-letter initials you choose, your
     scores, the skins you have unlocked, and your music and sound settings are stored locally
     on your device. They are not transmitted to us or stored on any server we operate, and
@@ -72,21 +82,25 @@
   </ul>
   <p>The app has <strong>no user accounts</strong> and does not ask for your name, email,
   contacts, photos, location, microphone, or any other personal information. There is no chat,
-  no messaging, no social features, no links to outside websites, and nothing to buy. We do not
-  operate our own servers that store your personal data.</p>
+  no messaging, no social features, and nothing to buy, and the only link out of the app is to
+  this privacy policy, on the About card behind the settings gear. We do not operate our own
+  servers that store your personal data.</p>
 
   <h2>Advertising</h2>
   <p>We use <strong>Google AdMob</strong> to show a full-screen ad between runs, no more than
   once every few runs. Because the app is made for families, it tells Google to treat every
   player as a child: ads are requested as <strong>non-personalized</strong>, at a
-  <strong>"G" content rating</strong>, and with the advertising ID flagged as child-directed
-  and under the age of consent. Google may still use the device data above to serve and
-  measure those ads and to detect fraud. Where required by law (for example, in the EEA and
+  <strong>"G" content rating</strong>, and flagged as child-directed and under the age of
+  consent. Google may still use the device data above to serve and measure those ads and to
+  detect fraud. Where required by law (for example, in the EEA and
   UK), the app shows Google's consent prompt before serving ads; if your consent choice cannot
-  be gathered, the app requests only non-personalized ads. You can learn about and control this
-  through <a href="https://policies.google.com/technologies/partner-sites" target="_blank"
-  rel="noopener">Google's advertising policies</a>, and you can reset or delete your
-  advertising ID in your Android settings under <em>Settings &rarr; Privacy &rarr; Ads</em>.</p>
+  be gathered, the app requests only non-personalized ads. Wherever that prompt applies, you can
+  change your choice at any time from <em>Ad Privacy Options</em> on the app's About card (the
+  settings gear, then About). You can learn about and control this through
+  <a href="https://policies.google.com/technologies/partner-sites" target="_blank"
+  rel="noopener">Google's advertising policies</a>. On Android, you can reset or delete your
+  advertising ID under <em>Settings &rarr; Privacy &rarr; Ads</em>. On iPhone, the app never asks
+  for permission to track you, so there is no advertising identifier for it to use.</p>
 
   <h2>Crash and diagnostic reporting</h2>
   <p>We do not operate a crash-reporting or analytics service. This app does not send us crash
@@ -103,12 +117,14 @@
   location, photos, or contacts, and the initials you enter are three letters that stay on
   your device. Ads are requested as child-directed and non-personalized at a "G" content
   rating for every player, as described above. There are no in-app purchases, no user-to-user
-  interaction, and no links out of the app.</p>
+  interaction, and no links out of the app apart from this privacy policy.</p>
 
   <h2>Your choices</h2>
   <ul>
-    <li>Reset or delete your advertising ID at any time in your device's ad settings.</li>
-    <li>Make your choice in the consent prompt, where it is shown.</li>
+    <li>On Android, reset or delete your advertising ID at any time in your device's ad
+    settings.</li>
+    <li>Make your choice in the consent prompt, where it is shown, and change it later from
+    <em>Ad Privacy Options</em> on the About card.</li>
     <li>Turn music and sound on or off in the app.</li>
     <li>Uninstall the app to remove all locally stored initials, scores, skins, and settings.</li>
   </ul>
@@ -137,8 +153,8 @@
     </div>
 
     <p class="credit">
-      Outfit typeface by the Outfit Project Authors, SIL Open Font License 1.1. Google Play and
-      the Google Play logo are trademarks of Google LLC.
+      Lilita One typeface by Juan Montoreano, SIL Open Font License 1.1. App Store is a service
+      mark of Apple Inc. Google Play is a trademark of Google LLC.
     </p>
   </div>
 </footer>
