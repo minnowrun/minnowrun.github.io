@@ -160,33 +160,29 @@ h1 .gold {
 }
 .lede strong { color: var(--text); font-weight: 600; }
 
-/* The store buttons. Plain text links to the two live listings; Apple's and Google's official
-   badge artwork can replace them (their rules want the official art, so don't redraw it). */
+/* The store badges: Apple's and Google's own artwork, copied from stormheadsup.github.io. Apple's
+   SVG is edge-to-edge. Google's PNG carries 41px of transparent padding around a 564x168 badge,
+   so scale it up and pull the padding back in to land on the same optical height. */
+:root { --badge-h: 52px; }
 .stores {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0.4rem 0 0;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.6rem;
 }
-.store {
+.stores a {
   display: inline-flex;
-  flex-direction: column;
-  flex: 1 1 10rem;
-  max-width: 13rem;
-  padding: 0.55rem 1.35rem 0.6rem;
-  border: 1px solid rgba(255, 210, 122, 0.55);
-  border-radius: 0.8rem;
-  background: rgba(6, 28, 44, 0.72);
-  color: var(--text);
-  text-decoration: none;
-  line-height: 1.15;
+  border-radius: 10px;
+  outline-offset: 4px;
 }
-.store:hover, .store:focus-visible {
-  border-color: var(--accent);
-  background: rgba(255, 210, 122, 0.14);
+.stores img { display: block; }
+.badge-apple { height: var(--badge-h); width: auto; }
+.badge-play {
+  height: calc(var(--badge-h) * 250 / 168);
+  width: auto;
+  margin: calc(var(--badge-h) * -41 / 168);
 }
-.store-small { font-size: 0.74rem; color: var(--muted); }
-.store-big { font-family: var(--display); font-size: 1.5rem; color: var(--accent); }
 
 .fineprint {
   margin: 0.2rem 0 0;
@@ -197,6 +193,7 @@ h1 .gold {
 
 /* Phones: crop in on the two fish (they fill the left ~60% of the art) so they read at this size. */
 @media (max-width: 600px) {
+  :root { --badge-h: 46px; }
   .hero-art {
     aspect-ratio: 4 / 3;
     object-position: 0% 50%;
